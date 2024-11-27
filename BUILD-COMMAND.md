@@ -1,0 +1,1 @@
+pyinstaller --onefile --add-data "docs;docs" --add-data "fonts;fonts" --add-data "icons;icons" --add-data "media;media" --add-data "scripts;scripts" --add-data "styles;styles" --add-data "main-page.html;." --add-data "stand-page.html;." main.py
