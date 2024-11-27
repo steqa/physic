@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 5vh;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  border: var(--window-border-thickness) solid var(--accent-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  gap: 30px;
+}
+
+.additionalBtns {
+  flex-direction: row;
+}
+
+.btn {
+  height: 100%;
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 70px;
+}

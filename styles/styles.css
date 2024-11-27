@@ -1,0 +1,80 @@
+:root {
+  --rope-color: rgb(43, 43, 43);
+  background-color: #e0f3ff;
+  color: #2c3e50;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 1em;
+
+  --color: #2c3e50;
+  --accent-color: #3498db;
+  --show-duration: 0.05s;
+  --window-border-thickness: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+body {
+  margin: 5vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5vh;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.8em;
+  transition: background-color 0.2s ease-in, opacity var(--show-duration) ease-in, color 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: #3ca7ef;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn.outline:hover {
+  background-color: #3ca7ef;
+  color: white;
+}
+
+.btn.inactive {
+  opacity: 0.5;
+  transition: all var(--show-duration) ease-in;
+}

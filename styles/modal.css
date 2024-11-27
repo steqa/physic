@@ -1,0 +1,64 @@
+.modal {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal .content {
+  height: 70%;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  border: var(--window-border-thickness) solid var(--accent-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  padding: 2rem;
+}
+
+.modal .content h1 {
+  margin-bottom: 1vh;
+}
+
+.modal .content .closeBtn {
+  height: 30px;
+  transform: rotateZ(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.modal .content .closeBtn:hover {
+  opacity: 0.7;
+}
+
+ol li {
+  margin: 3px 0;
+}
+
+ol li span {
+  font-weight: bold;
+}
+
+ol li::marker {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li::marker {
+  content: '– ';
+  font-weight: normal;
+}

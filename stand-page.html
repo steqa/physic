@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выполнение работы</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/stand.css" />
+    <link rel="stylesheet" href="/styles/stand-page.css" />
+  </head>
+  <body>
+    <a href="main-page.html" class="btn outline exitBtn">ВЫХОД</a>
+    <div class="container">
+      <h1>ИЗУЧЕНИЕ ЗАКОНОВ ДВИЖЕНИЯ СИСТЕМЫ СВЯЗАННЫХ ТЕЛ</h1>
+      <div class="content">
+        <div class="left">
+          <div class="content-container">
+            <h2>Результаты измерений</h2>
+            <div class="table-container">
+              <table id="resultsTable">
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>t, сек</th>
+                    <th>m, кг</th>
+                    <th>h, м</th>
+                    <th>M, кг</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <button class="btn" id="tableCleareBtn">ОЧИСТИТЬ</button>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="info">
+            <span>Радиус шкива: 0.05 м</span>
+          </div>
+          <div class="standSizeInner">
+            <div class="standContainer">
+              <div class="standInnerContainer">
+                <div class="stand">
+                  <div class="cylinder hidden">
+                    <img src="/media/cylinder.png" alt="cylinder" />
+                  </div>
+                  <div class="table"></div>
+                  <img src="/media/stand.png" alt="stand" />
+                  <div class="block">
+                    <img src="/media/block.png" alt="block" id="block" />
+                  </div>
+                  <div class="ropeBlock"></div>
+                  <img class="ropeConnector" src="/media/rope-connector.png" alt="rope-connector" />
+                  <div class="movingContainer">
+                    <div class="kettlebell">
+                      <div class="kettlebellImage">
+                        <img src="/media/kettlebell.png" alt="kettlebell" />
+                      </div>
+                      <div class="kettlebellBackground"></div>
+                    </div>
+                    <div class="rope"></div>
+                  </div>
+                  <div class="ruler hidden">
+                    <img src="/media/ruler.png" alt="ruler" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="controls">
+            <div class="timer">
+              <div class="display">
+                <div class="sec" id="timeSeconds">00</div>
+                <div>.</div>
+                <div class="msec" id="timeMilliseconds">00</div>
+              </div>
+            </div>
+            <button class="btn" id="stopButton">СТОП</button>
+            <div class="ranges">
+              <div class="rangeInput">
+                <label for="kettlebellWeight">Масса грузика, m: <span id="kettlebellWeightSpan"></span></label>
+                <input
+                  type="range"
+                  id="kettlebellWeightInput"
+                  min="100"
+                  max="1000"
+                  step="10"
+                  value="100"
+                  class="slider"
+                />
+              </div>
+              <div class="rangeInput">
+                <label for="kettlebellHeight"
+                  >Высота грузика над полом, h: <span id="kettlebellHeightSpan"></span
+                ></label>
+                <input type="range" id="kettlebellHeightInput" min="0" max="100" step="1" value="100" class="slider" />
+              </div>
+              <div class="rangeInput disabled" id="cylinderMassInputContainer">
+                <label for="cylinderMass">Масса исследуемого тела, M: <span id="cylinderMassSpan"></span></label>
+                <input type="range" id="cylinderMassInput" min="0.5" max="5" step="0.5" value="1" class="slider" />
+              </div>
+            </div>
+            <button class="startBtn btn">ПУСК</button>
+            <button class="clearBtn btn">СБРОСИТЬ</button>
+            <button class="rulerBtn btn inactive">ЛИНЕЙКА</button>
+            <button class="cylinderBtn btn inactive">ЦИЛИНДР</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/timer.js"></script>
+    <script src="/scripts/table.js"></script>
+  </body>
+</html>

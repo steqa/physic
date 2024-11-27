@@ -1,0 +1,210 @@
+.standContainer {
+  /* для изменения размера необходимо изменить height и подогнать width */
+  height: 100%;
+  width: 100%;
+  /* padding: 9vh; */
+  background-color: white;
+  padding-top: 23%;
+  padding-right: 40%;
+  padding-bottom: 2vh;
+  overflow-y: clip;
+  overflow-x: visible;
+}
+
+.standInnerContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.stand {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.stand img {
+  height: 100%;
+}
+
+.block {
+  position: absolute;
+  aspect-ratio: 1;
+  width: 20.4%;
+  top: 7.8%;
+  left: 79.9%;
+  opacity: 1;
+}
+
+.block img {
+  opacity: 1;
+  /* transform: rotate(80deg); */
+}
+
+#block {
+  --rotation-degree: 0deg;
+}
+
+.rotating {
+  animation-name: rotate;
+  animation-timing-function: cubic-bezier(0.49, 0.16, 0.87, 0.74);
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotation-degree));
+  }
+}
+
+.cylinder {
+  height: 8.7%;
+  width: 68%;
+  top: -8.75%;
+  left: 2.3%;
+  position: absolute;
+  transition: all var(--show-duration) ease-in;
+}
+
+.cylinder img {
+  height: 100%;
+  width: 100%;
+}
+
+.table {
+  height: 2vh;
+  width: 140%;
+  position: absolute;
+  top: 100%;
+  background-color: gray;
+  z-index: 3;
+}
+
+.movingContainer {
+  width: 45%;
+  height: 83.95%;
+  /* background-color: blue; */
+  position: absolute;
+  top: 16%;
+  left: 100%;
+  opacity: 1;
+}
+
+.ruler {
+  width: 33%;
+  height: 82.3%;
+  position: absolute;
+  left: 114%;
+  top: 17.5%;
+  background-color: wheat;
+  padding: 0.5vh;
+  padding-top: 1vh;
+  padding-left: 0.4vh;
+  box-shadow: 0vh 0.7vh 2vh rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  transition: all var(--show-duration) ease-in;
+}
+
+.ruler img {
+  height: 100%;
+}
+
+.kettlebell {
+  --top: 0vh;
+
+  top: var(--top);
+  width: 100%;
+  height: 4.3%;
+  /* background-color: red; */
+  position: absolute;
+  right: 48%;
+  z-index: 2;
+}
+
+.kettlebellImage {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.kettlebell img {
+  height: 100%;
+  width: 50%;
+}
+
+.kettlebellBackground {
+  width: 100%;
+  height: 10000%;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+
+.rope {
+  width: 3%;
+  height: 200%;
+  position: absolute;
+  top: -5%;
+  background-color: var(--rope-color);
+  z-index: 0;
+}
+
+.falling {
+  animation-name: fall;
+  animation-timing-function: cubic-bezier(0.49, 0.16, 0.87, 0.74);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: var(--top);
+  }
+  100% {
+    top: calc(100% - 4.2%);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: all var(--show-duration) ease-in;
+}
+
+.ropeBlock {
+  --rope-width: 0.75%;
+  --rope-height: 0.55%;
+  --rope-lenght: 30.5%;
+
+  background-color: var(--rope-color);
+  height: var(--rope-height);
+  width: var(--rope-lenght);
+  position: absolute;
+  bottom: 92.2%;
+  left: 21.1%;
+  z-index: 1;
+}
+
+.unwinding {
+  animation-name: unwind;
+  animation-timing-function: cubic-bezier(0.49, 0.16, 0.87, 0.74);
+  animation-fill-mode: forwards;
+}
+
+@keyframes unwind {
+  0% {
+    height: var(--rope-height);
+  }
+  100% {
+    height: var(--rope-width);
+  }
+}
+
+.ropeConnector {
+  position: absolute;
+  height: 4.6% !important;
+  left: 38.9%;
+  top: 7.255%;
+}

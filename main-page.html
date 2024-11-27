@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Изучение законов движения системы связаных тел</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/main-page.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
+    <link rel="stylesheet" href="/styles/author.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="/media/kuzstu.png" alt="kuzstu" class="logo" />
+      <div class="title">
+        <div>
+          <h2>Министерство науки и высшего образования Российской Федерации</h2р2>
+          <h1>
+            <span>Кузбасский государственный технический университет</span> <br />
+            <span>имени Т.Ф. Горбачева</span>
+          </h1>
+        </div>
+        <div>
+          <h2>Кафедра физики</h2>
+        </div>
+        <div>
+          <h2>Виртуальная лабораторная работа</h>
+          <h1>ИЗУЧЕНИЕ ЗАКОНОВ ДВИЖЕНИЯ СИСТЕМЫ СВЯЗАННЫХ ТЕЛ</h1>
+        </div>
+      </div>
+      <div>
+        <a href="stand-page.html" class="btn">Начать выполнение работы</a>
+        <div class="additionalBtns">
+          <button class="btn outline" onclick="document.getElementById('modal-1').style.display = 'flex';">Инструкция</button>
+          <button class="btn outline" onclick="openMethodologicalGuidelines()">Методические указания</button>
+        </div>
+      </div>
+      <div class="author">
+        <span class="authorBtn">Автор</span>
+        <div class="authorContainer">
+          <span>Степан Иванов</span>
+          <span>Студент группы ПИб-232</span>
+          <div>
+            <a href="https://t.me/steqaa">Telegram</a>
+            <a href="https://github.com/steqa">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-1">
+      <div class="content">
+        <img src="/icons/plus.svg" alt="exit" class="closeBtn" data-modal-id="modal-1" id="closeModal" />
+        <div>
+          <h1>
+            <span>Инструкция к виртаульной лабораторной работе</span> <br />
+            <span>«ИЗУЧЕНИЕ ЗАКОНОВ ДВИЖЕНИЯ СИСТЕМЫ СВЯЗАННЫХ ТЕЛ»</span>
+          </h1>
+          <ol>
+            <li>
+              <span>По указанию преподавателя задайте параметры эксперимента</span>
+              <ul>
+                <li>массу грузика;</li>
+                <li>высоту грузика над полом;</li>
+                <li>массу исследуемого тела (доступно после того, как вы положили исследуемое тело на столик).</li>
+              </ul>
+            </li>
+            <li>
+              <span>Проведение эксперимента</span>
+              <ul>
+                <li>нажмите кнопку “ЛИНЕЙКА”, чтобы отобразить линейку;</li>
+                <li>для запуска симуляции нажмите кнопку “ПУСК”;</li>
+                <li>обратите внимание на запустившийся таймер;</li>
+                <li>нажмите кнопку “СТОП”, как только грузик опустится до пола, чтобы остановить таймер;</li>
+                <li>в таблице с результатами измерений отобразится номер опыта, время с таймера и заданные параметры;</li>
+                <li>для проведения нового опыта нажмите кнопку “СБРОСИТЬ” и повторно запустите симуляцию;</li>
+                <li>нажмите кнопку “ЦИЛИНДР”, чтобы положить на столик изучаемое тело;</li>
+                <li>чтобы очистить таблицу результатов измерений нажмите кнопку “ОЧИСТИТЬ”;</li>
+                <li>для выхода на главную страницу нажмите кнопку “ВЫХОД”.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <button class="btn" onclick="openGuide()">Открыть файл</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/modal.js"></script>
+    <script src="/scripts/file.js"></script>
+  </body>
+</html>
